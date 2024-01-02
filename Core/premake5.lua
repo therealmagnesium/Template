@@ -14,16 +14,11 @@ files({
 
 includedirs({
 	"source",
-	"../vendor/raylib/include",
 })
 
-libdirs({
-	"../vendor/raylib/lib",
-})
+libdirs({})
 
-links({
-	"raylib",
-})
+links({})
 
 filter("system:linux")
 system("linux")
