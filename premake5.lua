@@ -7,5 +7,5 @@ configurations({
 	"Dist",
 })
 
-include("Core")
+include("Engine")
 include("App")

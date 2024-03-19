@@ -1,6 +1,6 @@
 local outputdir = "%{cfg.buildcfg}-%{cfg.system}"
 
-project("Core")
+project("Engine")
 kind("StaticLib")
 language("C++")
 

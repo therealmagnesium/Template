@@ -19,6 +19,20 @@ then
         cd "bin/Dist-linux/$appName"
         ./$appName
     fi
+elif [[ $config = "assets" ]]
+then
+    mode="$2"
+    if [[ $mode = "debug" ]]
+    then
+        cp -r App/assets/ bin/Debug-linux/Application/
+    elif [[ $mode = "release" ]]
+    then
+        cp -r App/assets/ bin/Release-linux/Application/
+    elif [[ $mode = "dist" ]]
+    then
+        cp -r App/assets/ bin/Dist-linux/Application/
+    fi
+
 elif [[ $config = "clean" ]]
 then
     rm -rf bin build

@@ -10,3 +10,11 @@ typedef uint8_t u8;
 typedef uint16_t u16;
 typedef uint32_t u32;
 typedef uint64_t u64;
+
+#define V2_FMT "<%.3f, %.3f>"
+#define V3_FMT "<%.3f, %.3f, %.3f>"
+
+#define V2_OPEN(v) v.x, v.y
+#define V3_OPEN(v) v.x, v.y, v.z
+
+#define LEN(array) sizeof(array) / sizeof(array[0])

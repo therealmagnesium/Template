@@ -8,24 +8,22 @@ targetdir("../bin/" .. outputdir .. "/%{prj.name}")
 objdir("../build/" .. outputdir .. "/%{prj.name}")
 
 files({
-	"source/**.h",
-	"source/**.cpp",
+    "source/**.h",
+    "source/**.cpp",
 })
 
 includedirs({
-	"../Core/source",
+    "../Engine/source",
 })
 
-libdirs({
-	"../bin/" .. outputdir .. "/Core",
-})
+libdirs({})
 
 links({
-	"Core",
+    "Engine",
 })
 
 postbuildcommands({
-	"cp -r assets/ %{cfg.buildtarget.directory}",
+    "cp -r assets/ %{cfg.buildtarget.directory}",
 })
 
 filter("system:Unix")
@@ -33,7 +31,7 @@ system("linux")
 cppdialect("C++17")
 systemversion("latest")
 defines({
-	"PLATFORM_LINUX",
+    "PLATFORM_LINUX",
 })
 
 filter("configurations:Debug")
@@ -47,3 +45,4 @@ optimize("on")
 filter("configurations:Dist")
 defines("DIST")
 optimize("on")
+kind("WindowedApp")
